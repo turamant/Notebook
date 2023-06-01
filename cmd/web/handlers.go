@@ -55,8 +55,8 @@ func (app *application) createSnippet(w http.ResponseWriter, r *http.Request) {
 		app.clientError(w, http.StatusMethodNotAllowed)
 		return
 	}
-	title := "O snail"
-	content := "O snail\nClimb Mount Fuji,\nBut slowly, slowly!\n\n- Kobayashi Issa"
+	title := "How about..."
+	content := "How about...\nHow about Eddy,\nWhat can i do for you?\n\n- Askvart Victor"
 	expires := "7"
 
 	id, err := app.snippets.Insert(title, content, expires)
