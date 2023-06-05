@@ -12,6 +12,16 @@ import (
 	"askvart.ru/snippetbox/pkg/models"
 )
 
+
+func (app *application) about(w http.ResponseWriter, r *http.Request){
+	if r.URL.Path != "/about"{
+		app.notFound(w)
+		return
+	}
+
+	app.render(w, r, "about.page.tmpl", nil)
+}
+
 func (app *application) home(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
 		app.notFound(w)
